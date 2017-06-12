@@ -3,8 +3,6 @@ package application;
 
 import java.io.IOException;
 
-//import businesslogic.Service;
-//import facade.Facade;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
