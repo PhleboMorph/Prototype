@@ -40,22 +40,17 @@ public class ImageProcessing {
 			process = pb.start();
 
 		BufferedReader stdInput = new BufferedReader(new InputStreamReader(process.getInputStream())); 
-		FileHandler fh;
-			fh = new FileHandler("D:/resultAPI.txt");
 		Logger logger = Logger.getLogger("global");
-		logger.addHandler(fh);
-		SimpleFormatter formatter = new SimpleFormatter();
-		fh.setFormatter(formatter);
 		String line = null;
 		
 			while ((line = stdInput.readLine()) != null) {
-			    logger.log(Level.INFO, "OK" + line);
+			    logger.log(Level.INFO, line);
 		}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("Logging Completed...");
+		System.out.println("Completed...");
 		
 
 		return "OK";
